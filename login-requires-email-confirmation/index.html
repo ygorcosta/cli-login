@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CLI / Login Requires Email Confirmation</title>
+  <link rel="shortcut icon" href="/static/images/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,700">
+  <style>
+  body {
+      background: #0e141a;
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #00d46a;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+
+  .logo {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 18px 0 0 0;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 0 48px;
+    font-size: 16px;
+    line-height: 60px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: 0px solid #00d46a;
+    background: #00d46a;
+    color: white;
+    margin: 6px;
+    flex: 0 1 auto;
+    display: inline-block;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.333s;
+  }
+  .btn:hover {
+    background: rgba(0,212,106,0.8);
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Login Requires Email Confirmation</h1>
+    <h2>To continue, confirm your email address and run <code>we&nbsp;login</code> again.</h2>
+    <div class="btn-group">
+      <a href="//wedeploy.com/docs" class="btn">Go to Docs</a>
+    </div>
+  </div>
+
+  <img class="logo" src="https://cloud.githubusercontent.com/assets/398893/16279177/af9b3622-386e-11e6-920e-3a3f33169831.png" width="150" alt="WeDeploy">
+</body>
+</html>
