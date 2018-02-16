@@ -1,6 +1,7 @@
 /* ========================================================================== */
 :root {
   --green: #00AE55;
+  --green-blend-black-20: #00572b;
   --black-80: rgba(14, 20, 26, 0.80);
   --black-60: rgba(14, 20, 26, 0.60);
   --black-12: rgba(14, 20, 26, 0.12);
@@ -35,8 +36,7 @@ svg {
 }
 
 .link,
-.link:visited
-.link:focus {
+.link:visited {
   color: var(--green);
   display: inline-block;
   font-size: 14px;
@@ -45,10 +45,33 @@ svg {
   font-weight: 400;
 }
 
+.link:focus,
+.link:hover {
+  color: var(--green-blend-black-20);
+}
+
 .link-icon {
   display: inline-block;
   height: 18px;
   width: 18px;
+}
+
+.link:focus .arrow-right,
+.link:hover .arrow-right {
+  background: url('../images/arrow-right-hover.svg')
+}
+
+.arrow-right {
+  background: url('../images/arrow-right.svg');
+}
+
+.link:focus .short-arrow-right,
+.link:hover .short-arrow-right {
+  background: url('../images/short-arrow-right-hover.svg')
+}
+
+.short-arrow-right {
+  background: url('../images/short-arrow-right.svg');
 }
 
 .link-icon.--right {
@@ -96,13 +119,9 @@ svg {
 }
 
 .avatar-image {
-  border-color: var(--black-12);
   border-radius: 50%;
-  border-style: solid;
-  border-width: 1px;
-  box-sizing: content-box;
-  height: 89px;
-  width: 89px;
+  height: 90px;
+  width: 90px;
 }
 
 .avatar-sign {
@@ -113,10 +132,15 @@ svg {
   width: 30px;
 }
 
+.sign-badge {
+  height: 30px;
+  width: 30px;
+}
+
 .user-name {
   color: var(--black);
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 24px;
   margin: 24px 0 0;
 }
@@ -173,7 +197,15 @@ svg {
   height: 312px;
   margin: 36px auto 0;
   max-width: 548px;
+  position: relative;
   width: 100%;
+
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
+
 }
 
 .cli-description {
@@ -245,7 +277,14 @@ svg {
   background: var(--white);
   border-radius: 6px;
   padding: 36px 18px 42px;
+  position: relative;
   text-align: center;
+
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
 }
 
 .hightlight-icon {
@@ -279,6 +318,7 @@ svg {
 
 .hightlight-link .link-icon {
   margin-top: 4px;
+  margin-left: 4px;
 }
 
 /* Footer
@@ -311,4 +351,65 @@ svg {
   padding: 0 18px;
   position: relative;
   text-align: center;
+}
+
+/* animation
+/* ========================================================================== */
+@keyframes fadein {
+    from {
+      opacity: 0;
+      top: -20px;
+    }
+    to   {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+      opacity: 0;
+      top: -20px;
+    }
+    to   {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+      top: -20px;
+    }
+    to   {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+      opacity: 0;
+      top: -20px;
+    }
+    to   {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from {
+      opacity: 0;
+      top: -20px;
+    }
+    to   {
+      opacity: 1;
+      top: 0;
+    }
 }
