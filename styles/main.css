@@ -40,9 +40,10 @@ svg {
   color: var(--green);
   display: inline-block;
   font-size: 14px;
+  font-weight: 400;
   line-height: 18px;
   text-decoration: none;
-  font-weight: 400;
+  transition: color 0.333s;
 }
 
 .link:focus,
@@ -52,26 +53,15 @@ svg {
 
 .link-icon {
   display: inline-block;
+  fill: var(--green);
   height: 18px;
+  transition: fill 0.333s;
   width: 18px;
 }
 
-.link:focus .arrow-right,
-.link:hover .arrow-right {
-  background: url('../images/arrow-right-hover.svg')
-}
-
-.arrow-right {
-  background: url('../images/arrow-right.svg');
-}
-
-.link:focus .short-arrow-right,
-.link:hover .short-arrow-right {
-  background: url('../images/short-arrow-right-hover.svg')
-}
-
-.short-arrow-right {
-  background: url('../images/short-arrow-right.svg');
+.link:focus .link-icon,
+.link:hover .link-icon{
+  fill: var(--green-blend-black-20);
 }
 
 .link-icon.--right {
@@ -155,6 +145,12 @@ svg {
   padding: 0 18px;
   position: relative;
   text-align: center;
+
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
 }
 
 .welcome-subtitle {
@@ -166,6 +162,12 @@ svg {
   padding: 0 18px;
   position: relative;
   text-align: center;
+
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
 }
 
 /* CLI
